@@ -1,0 +1,84 @@
+#modal{
+    background-color:black;
+    width:450px;
+    height: 560px;
+    margin: 100px auto;
+    color:white;
+    opacity: 80%;
+    margin: auto auto;
+}
+
+#header{
+    font-family:Helvetica, sans-serif ;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+#modalConteiner1{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity:100%;
+}
+
+#modalConteiner2{
+    width: 400px;
+    height: 200px;
+    padding: 10%;
+}
+
+.modal-input{
+    background-color: white;
+    width: 314px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalinput{
+    margin: 1% 5%;
+    border:0ch;
+    font-size:medium;
+    outline: none;
+    border: 0;    
+}
+
+.modalspan{
+    color:black;
+    font-size: smaller;
+    margin-top: 0.5rem;
+    margin-left:1rem;
+}
+
+.modalbutton{
+    background-color: red;
+    color:white;
+    width: 314px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+#modalhelp{
+    background-color: black;
+    color:white;
+    text-align:right;
+}
+
+#textoEmail{
+    color:black;
+    font-size: larger;
+    padding: 0 1%;
+    border-radius: 5px;
+}
+
+#check-help{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

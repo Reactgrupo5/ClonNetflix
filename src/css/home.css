@@ -1,0 +1,130 @@
+#container{
+    margin: 0px;
+    width: 100%;
+    height: vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    
+}
+
+#fondo{
+    width: 100%;
+    height: vh;
+    margin: 0;
+}
+
+h1{
+    color:white
+}
+
+#inicial{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#arriba{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 10%;
+    height: 5%;
+    margin: 2% 2%;
+}
+
+#LangSel{ 
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    border-style: 3px white solid;
+}
+
+select{
+   height: 40px;
+   font-size: larger;
+   border:0px none;
+   color:white;
+   background-color: black;
+}
+
+#mundito{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+#Sel-Butt{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#language{
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 50px;
+    font-size: larger;
+    margin: 2% 0;
+}
+
+.InicButton{
+    background-color: crimson;
+    color: white;
+    font-size: larger;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#textoDEabajo{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.textoDeabajo{
+    color:white;
+    padding: 10px 0;
+    
+}
+
+#textoDEabajoGrande{
+    font-size:4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textoDEabajoMediano{
+    font-size: 1.5rem;
+}
+
+#textoEmailButton{
+    display: flex;
+    flex-direction: row;
+}
+
+#textoEmail{
+    width:500px;
+    height:45px;
+}
+
+#textoButton{
+    width:200px;
+    height: 50px;
+    background-color: red;
+    color:white;
+    font-size: large;
+}

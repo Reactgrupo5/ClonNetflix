@@ -1,0 +1,21 @@
+.SwiperImage:hover
+{
+    font-style: italic;
+    color:red;
+}
+
+#retorno{   
+    background-color: red;  
+}
+
+#avance{   
+    background-color:blue;
+}
+
+#avance, #retorno{
+    width:10%;
+    height: 30px;
+    color:white;
+    border-radius: 5px;
+    margin:5px;
+}
