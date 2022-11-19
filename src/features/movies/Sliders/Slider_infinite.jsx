@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import ContextMovies from "../context/ContextMovies";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,13 +13,17 @@ import "./Slider.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import MovieCard from "./MovieCard";
 
 const Slider = (props) => {
+  //   const { movieId, setMovieId, movieUrl, setMovieUrl } =
+  //     useContext(ContextMovies);
+
   return (
     <>
       <Swiper
         slidesPerView={7}
-        spaceBetween={1}
+        spaceBetween={0}
         slidesPerGroup={7}
         loop={true}
         loopFillGroupWithBlank={true}
@@ -29,23 +34,11 @@ const Slider = (props) => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {props.movies.map((movie, index) => {
+        {props.movies.map((movie) => {
           return (
             <div id="swip">
-              <SwiperSlide key={index}>
-                <div>
-                  <h5
-                    className="SwiperImage"
-                    style={{ textAlign: "center", color: "white" }}
-                  >
-                    {movie.title}
-                  </h5>
-                  <img
-                    src={movie.backdrop_path}
-                    style={{ width: "90%" }}
-                    alt=""
-                  ></img>
-                </div>
+              <SwiperSlide>
+                <MovieCard movie={movie} key={movie.id} />
               </SwiperSlide>
             </div>
           );

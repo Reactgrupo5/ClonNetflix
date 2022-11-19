@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../../css/home.css";
 
 const InicButton = (props) => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const InicButton = (props) => {
 
   return (
     <div>
-      <button id="InicButton" className="InicButton" onClick={handleClick}>
+      <button className="InicButton" onClick={handleClick}>
         {props.texto}
       </button>
     </div>

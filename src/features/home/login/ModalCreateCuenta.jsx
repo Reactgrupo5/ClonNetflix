@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import Modal from "react-bootstrap/Modal";
 import "../../../css/ModalCreateCuenta.css";
-import { dblClick } from "@testing-library/user-event/dist/click";
+// import { dblClick } from "@testing-library/user-event/dist/click";
 
 const ModalCreateCuenta = () => {
   const [form, setForm] = useState({

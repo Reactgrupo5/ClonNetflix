@@ -1,3 +1,5 @@
+
+
 #modal{
     background-color:black;
     width:450px;
@@ -6,6 +8,10 @@
     color:white;
     opacity: 80%;
     margin: auto auto;
+}
+
+.modal{
+    margin:0 auto;
 }
 
 #header{
@@ -40,9 +46,9 @@
 }
 
 .modalinput{
-    margin: 1% 5%;
+    margin: -2% 5%;
     border:0ch;
-    font-size:medium;
+    font-size:1em;
     outline: none;
     border: 0;    
 }

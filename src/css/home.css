@@ -81,8 +81,8 @@ select{
 .InicButton{
     background-color: crimson;
     color: white;
-    font-size: larger;
-    width: 150px;
+    font-size: 1.25em;
+    width: 160px;
     height: 50px;
     border-radius: 5px;
 }
@@ -90,21 +90,22 @@ select{
 #textoDEabajo{
    display: flex;
    flex-direction: column;
-   justify-content: center;
    align-items: center;
+  
 }
 
 .textoDeabajo{
     color:white;
-    padding: 10px 0;
-    
+    padding: 20px 10px;
 }
 
 #textoDEabajoGrande{
     font-size:4em;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    height: 180px;
 }
 
 #textoDEabajoMediano{
