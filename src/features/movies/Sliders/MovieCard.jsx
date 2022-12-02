@@ -1,13 +1,19 @@
-import React from "react";
+import React,{Children, useContext} from "react";
+import ContextMovies from "../context/ContextMovies"
 
-const MovieCard = ({ movie, key }) => {
-  const mostraAlgo = (id, path) => {
-    console.log("Movie-Id ahora:", id);
-    sessionStorage.setItem("movieID", id + "***" + path);
+const MovieCard = ({ movie }) => {
+
+  const {setMovieId,setMovieUrl}=useContext(ContextMovies)
+
+  const mostraAlgo = () => {
+    console.log("Url:",movie.backdrop_path)
+    setMovieId(movie.id)
+    setMovieUrl(movie.backdrop_path)
   };
-
+ 
   return (
-    <div key={key}>
+    <>
+    <div>
       <h5
         className="SwiperImage"
         style={{ textAlign: "center", color: "white" }}
@@ -17,12 +23,13 @@ const MovieCard = ({ movie, key }) => {
       <img
         src={movie.backdrop_path}
         style={{ width: "90%" }}
-        alt=""
+        alt="" 
         onClick={() => {
-          mostraAlgo(movie.id, movie.backdrop_path);
+          mostraAlgo;
         }}
       ></img>
     </div>
+    </>
   );
 };
 

@@ -1,59 +1,19 @@
-import { createContext } from "react";
+import { createContext,useState } from "react";
+import Slider_infinite from "../Sliders/Slider_infinite";
 
 const ContextMovies = createContext();
 
 export default ContextMovies;
 
-// import React, { useState } from "react";
-// import ContextoBanner from "./ContextoBanner";
-// import Hijo1 from "./Hijo1";
-// import Hijo4 from "./Hijo4";
-
-// const Contexto = () => {
-//   const [comision, setComision] = useState("22805");
-
-//   return (
-//     <div>
-//       <h1>PADRE</h1>
-
-//       <ContextoBanner.Provider
-//         value={{
-//           comision,
-//           setComision,
-//         }}
-//       >
-//         <Hijo1 />
-//         <Hijo4 />
-//       </ContextoBanner.Provider>
-//     </div>
-//   );
-// };
-
-// export default Contexto;
-
-// /*
-
-//             useState - Estados
-//             useEffectos - Efectos secundarios y ciclo de vida
-//             useContext - Contexto
-
-//             useReducer - Reducers
-
-//             ////////////////////////////////
-
-//             useRef - Referencias
-//             useLayoutEffect - Efectos secundarios y ciclo de vida
-
-//             ////////////////////////////////
-
-//             useCallback - Memorización
-//             useMemo - Memorización
-//             memo - Memorización
-
-// */
-
-// import { createContext } from "react";
-
-// const ContextoBanner = createContext();
-
-// export default ContextoBanner;
+export const MoviesProvider = ({children}) => {
+    const [movieId, setMovieId] = useState(0);
+    const [movieUrl, setMovieUrl] = useState("/");
+  
+    return (
+      <ContextMovies.Provider
+        value={{ movieId, setMovieId, movieUrl, setMovieUrl }}
+      >
+        {children}
+      </ContextMovies.Provider>
+    );
+  };

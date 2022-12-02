@@ -2,7 +2,7 @@
     margin: 0px;
     width: 100%;
     height: vh;
-    position: fixed;
+    position:absolute;
     top: 0px;
     left: 0px;
     

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import Services from "./services/Services";
-import Slider from "../features/movies/Sliders/Slider_infinite";
+import Services from "../../../common/services/Services"
+import Slider from "../Sliders/Slider_infinite";
 // import SwiperInfinite from "../features/movies/components/Sliders/SwiperInfinite";
 
 const Movies = (props) => {
+
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [movie, setMovie] = useState([]);

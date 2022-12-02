@@ -1,10 +1,11 @@
-import React from "react";
+import { MoviesProvider } from "../movies/context/ContextMovies";
 import Movies from "../movies/Movies";
 
 const Major = () => {
+
   return (
     <div>
-      <Movies />
+        <Movies />
     </div>
   );
 };

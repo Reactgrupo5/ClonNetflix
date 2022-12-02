@@ -2,25 +2,26 @@ import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../../auth/AuthContext";
 
-import users from "../../../common/data/Users";
-
 import Modal from "react-bootstrap/Modal";
 import "../../../css/ModalLogin.css";
 import fondo from "../../../common/img/fondo.jpg";
 
+import {chekUser} from "./CheckLogin"
+
 const ModalLogin = () => {
+
+  const { setIsAuth, setUser } = useContext(AuthContext);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [form, setForm] = useState({
     username: "",
     password: "",
   });
 
-  const [show, setShow] = useState(false);
   const navigate = useNavigate();
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  //   const { setIsAuth, setUser } = useContext(AuthContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,27 +38,17 @@ const ModalLogin = () => {
       handleClose();
       sessionStorage.clear();
       sessionStorage.setItem("username", form.username);
-      navigate("/major");
-    } else {
-      alert("Usuario o Contraseña Incorrectos!");
-    }
-  };
-
-  const chekUser = (form) => {
-    let userAuth = false;
-    for (let i = 0; i < users.length; i++) {
-      if (
-        users[i].user === form.username &&
-        users[i].password === form.password
-      ) {
-        userAuth = true;
-        // setIsAuth(true);
-        // setUser(form.username);
+      setUser(form.username)
+      setIsAuth(true);
+    }else{
+      setUser("")
+      setIsAuth(false)
       }
+
+      navigate("/major");
+
     }
 
-    return userAuth;
-  };
 
   const handleHelp = (e) => {
     e.preventDefault();
