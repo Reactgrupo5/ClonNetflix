@@ -44,6 +44,18 @@ const Services = {
     Popular: () => {},
     TopRank: () => {},
   },
+  getVideo:{
+    advance: async (video_id) => {
+    const url = `https://api.themoviedb.org/3/movie/${video_id}/videos?api_key=${API_KEY}&language=en-US`;
+    const data = await axios.get(url);
+    const dato= await data.data.results
+
+    const key=dato.filter(word => word.key!="")[0].key
+
+    console.log("KEY:",key)
+    return key
+  
+    }}
 };
 
 export default Services;

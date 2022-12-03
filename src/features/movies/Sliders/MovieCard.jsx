@@ -1,14 +1,16 @@
-import React,{Children, useContext} from "react";
+import React,{useContext} from "react";
 import ContextMovies from "../context/ContextMovies"
+import Services from "../../../common/services/Services";
 
 const MovieCard = ({ movie }) => {
 
-  const {setMovieId,setMovieUrl}=useContext(ContextMovies)
+  const {setMovieKey}=useContext(ContextMovies)
 
-  const mostraAlgo = () => {
-    console.log("Url:",movie.backdrop_path)
-    setMovieId(movie.id)
-    setMovieUrl(movie.backdrop_path)
+  const mostraAlgo = async () => {
+    
+    const  data= await Services.getVideo.advance(movie.id)
+    console.log("movie.id:",movie.id)
+    setMovieKey(data)
   };
  
   return (
@@ -25,7 +27,7 @@ const MovieCard = ({ movie }) => {
         style={{ width: "90%" }}
         alt="" 
         onClick={() => {
-          mostraAlgo;
+          mostraAlgo();
         }}
       ></img>
     </div>

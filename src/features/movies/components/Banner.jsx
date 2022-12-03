@@ -1,16 +1,35 @@
 import React, { useState, useContext } from "react";
 import ContextMovies from "../context/ContextMovies";
+import ReactPlayer from "react-player";
+import {url_youtube} from "../../../utils/constants.js";
 
 const Banner = () => {
-    const { movieId, setMovieId, movieUrl, setMovieUrl } =
-      useContext(ContextMovies);
+    const { movieKey } = useContext(ContextMovies);
 
-console.log("movieUrl:",movieUrl)
+    const url=url_youtube + movieKey;
+
+    console.log(url);
 
   return (
     <div>
-      <img src={movieUrl} alt="" />
-      <h1>BANNER</h1>
+    
+      {/* <img src={movieUrl} alt="" style={{width: "40%",
+                margin: "auto",
+                display: "block"}} /> */}
+
+      <ReactPlayer
+          style={{width: "40%",
+                margin: "auto",
+                display: "block"}}
+          url={url}
+          className="react-player"
+          playing
+          width="100%"
+          height="100%"
+          muted={false}
+          autoPlay={true}
+        />
+      
     </div>
   );
 };

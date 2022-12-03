@@ -1,17 +1,15 @@
 import { createContext,useState } from "react";
-import Slider_infinite from "../Sliders/Slider_infinite";
 
 const ContextMovies = createContext();
 
 export default ContextMovies;
 
 export const MoviesProvider = ({children}) => {
-    const [movieId, setMovieId] = useState(0);
-    const [movieUrl, setMovieUrl] = useState("/");
+    const [movieKey, setMovieKey] = useState(0);
   
     return (
       <ContextMovies.Provider
-        value={{ movieId, setMovieId, movieUrl, setMovieUrl }}
+        value={{ movieKey, setMovieKey }}
       >
         {children}
       </ContextMovies.Provider>
